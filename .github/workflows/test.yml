@@ -1,7 +1,12 @@
 name: validate
 on:
-  push:
-
+  pull_request_target:
+    types:
+      - closed
+      - labeled
+    branches:
+      - main
+      - 'release/*.*.x'
 jobs:
   go-test:
     runs-on: ubuntu-latest
