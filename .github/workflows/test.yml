@@ -1,6 +1,6 @@
 name: validate
 on:
-  pull_request:
+  push:
 
 jobs:
   go-test:
