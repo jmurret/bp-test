@@ -1,0 +1,14 @@
+name: validate
+on:
+  push:
+
+jobs:
+  go-test:
+    runs-on: ubuntu/latest
+    steps:
+      - name: print event
+        env:
+          EVENT: ${{ toJson(github.event) }}
+        run: |
+          echo "$EVENT"
+    
